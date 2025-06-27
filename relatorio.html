@@ -1,68 +1,117 @@
-<!DOCTYPE html>
+A análise da transcrição da imagem e do modelo de referência fornecidos indicam as seguintes comparações de campos:
 
-<html>
-<head>
-  <meta charset="UTF-8" />
-  <title>My HTML document</title>
-</head>
-<body>
-  <div class="container">
-    <h1>This is an H1 heading</h1>
-    <h2>This is an H2 heading</h2>
-   <p>Aqui está o relatório de validação solicitado:</p>
-<p>| Campo                       | Valor no modelo (xlsx)                 | Valor na imagem (OCR)                                         | Status da validação | Sugestão de correção                                 |
-|------------------------------|----------------------------------------|--------------------------------------------------------------|---------------------|-----------------------------------------------------|
-| Razão Social                | ETELE CALL CENTER E CORRETORA DE SEGUROS LTDA  | ETELE CALL CENTER E CORRETORA DE SEGUROS LTDA                   | ✔️                   | -                                                     |
-| CNPJ                         | 24.493.333/0001-68                      | 24.493.333/0001-88                                              | ❌                   | Verificar e corrigir o último dígito do CNPJ          |
-| Endereço                     | Rua Elias Nassif Sobrinho, 271, Anexo 01  | Rua Elias Nassif Sobrinho, 271, Anexo 01                       | ✔️                   | -                                                     |
-| Cidade                      | Franca                                  | -                                                              | ⛔️                   | Preencher a cidade na imagem                           |
-| Estado                       | SP                                      | SP                                                             | ✔️                   | -                                                     |
-| Nome Fantasia                | GRUPO ETELE                             | -                                                              | ⛔️                   | Preencher o nome fantasia na imagem                    |
-| Telefone                     | (16) 99239-5505                         | -                                                              | ⛔️                   | Preencher o telefone na imagem                        |
-| Período                      | JUNHO 2025                              | -                                                              | ⛔️                   | Preencher o período na imagem                          |
-| Bairro                      | -                                       | São Joaquim                                                  | ❌ (campo extra)     | Verificar se este campo é relevante para a validação  |
-| Regiões                      | São Joaquim                              | São Joaquim                                                  | ✔️                   | -                                                     |
-| Cep                          | -                                       | -                                                              | ⛔️                   | Preencher o CEP na imagem                             |
-| PRODUTO                      | VALEGAR PROTEÇÃO VEICULAR               | VALEGAR PROTEÇÃO VEICULAR                                     | ✔️                   | -                                                     |
-| PROGRAMA                     | Fala Brasil, Hora em Dia, etc.            | Fala Brasil, Hora em Dia, etc.                                  | ✔️                   | -                                                     |
-| SEG                          | 372, 30, etc.                            | 372, 30, etc.                                                  | ✔️                   | -                                                     |
-| DIA                          | 5/07/2017, 5/07/2017, etc.               | 5/07/2017, 5/07/2017, etc.                                     | ✔️                   | -                                                     |
-| SÍNIA                        | JALA                                    | JALA                                                          | ✔️                   | -                                                     |
-| NOVA                         | -                                       | -                                                              | ⛔️                   | Verificar se este campo deve ser preenchido          |
-| GENERO                       | Inovação                                 | -                                                              | ⛔️                   | Preencher o gênero na imagem                          |
-| TÍTULO                      | 1                                       | 1                                                             | ✔️                   | -                                                     |</p>
-<p>Observações:</p>
-<ul>
-<li>Verifique e corrija o último dígito do CNPJ, preencha os campos faltantes (cidade, telefone, período, CEP e gênero) e verifique a necessidade de preencher os campos "bairro" e "nova".</li>
-<li>Além disso, verifique se o formato da data nos campos "dia" está consistente e se os valores nos campos "seg" e "sínia" estão corretos.</li>
-</ul>
-  </div>
-</body>
-</html>
+<table border="1" cellpadding="8" cellspacing="0">
+  <thead>
+    <tr>
+      <th>Campo</th>
+      <th>Valor no modelo (xlsx)</th>
+      <th>Valor na imagem (OCR)</th>
+      <th>Status da validação</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>ANUNCIANTE</td>
+      <td>Não fornecido no modelo</td>
+      <td>Razão Social: ETELE CALL CENTER E CORRETORA DE SEGUROS LTDA</td>
+      <td>⛔️</td>
+    </tr>
+    <tr>
+      <td>Razão Social</td>
+      <td>Não fornecido no modelo</td>
+      <td>ETELE CALL CENTER E CORRETORA DE SEGUROS LTDA</td>
+      <td>❌</td>
+    </tr>
+    <tr>
+      <td>CNPJ</td>
+      <td>Não fornecido no modelo</td>
+      <td>CNPJ: 24.493.333/0001-88</td>
+      <td>❌</td>
+    </tr>
+    <tr>
+      <td>Endereço</td>
+      <td>Não fornecido no modelo</td>
+      <td>Endereço: Rua Elias Nassif Sobrinho, 271, Anexo 01</td>
+      <td>⛔️</td>
+    </tr>
+    <tr>
+      <td>Bairro</td>
+      <td>Não fornecido no modelo</td>
+      <td>Bairro: São Joaquim</td>
+      <td>⛔️</td>
+    </tr>
+    <tr>
+      <td>Estado</td>
+      <td>Não fornecido no modelo</td>
+      <td>Regiões: São Joaquim Estado: SP</td>
+      <td>⛔️</td>
+    </tr>
+    <tr>
+      <td>Telefone</td>
+      <td>Não fornecido no modelo</td>
+      <td></td>
+      <td>✅</td>
+    </tr>
+    <tr>
+      <td>Fax</td>
+      <td>Não fornecido no modelo</td>
+      <td>Não encontrado na imagem</td>
+      <td>⛔️</td>
+    </tr>
+    <tr>
+      <td>AGÊNCIA</td>
+      <td>Não fornecido no modelo</td>
+      <td>PRODUTO VALEGAR PROTEÇÃO VEICULAR</td>
+      <td>❌</td>
+    </tr>
+    <tr>
+      <td>Contato</td>
+      <td>Não fornecido no modelo</td>
+      <td>Não encontrado na imagem</td>
+      <td>⛔️</td>
+    </tr>
+    <tr>
+      <td>Material</td>
+      <td>Não fornecido no modelo</td>
+      <td>PRODUTO VALEGAR PROTEÇÃO VEICULAR</td>
+      <td>❌</td>
+    </tr>
+    <tr>
+      <td>PRODUTO</td>
+      <td>Não fornecido no modelo</td>
+      <td>PRODUTO VALEGAR PROTEÇÃO VEICULAR</td>
+      <td>✅</td>
+    </tr>
+    <tr>
+      <td>TÍTULO</td>
+      <td>Não fornecido no modelo</td>
+      <td>Não encontrado na imagem</td>
+      <td>⛔️</td>
+    </tr>
+    <tr>
+      <td>DURAÇÃO</td>
+      <td>Não fornecido no modelo</td>
+      <td>Não encontrado na imagem</td>
+      <td>⛔️</td>
+    </tr>
+    <tr>
+      <td>VALECAR PROTEÇÃO VEICULAR</td>
+      <td>Não fornecido no modelo</td>
+      <td>PRODUTO VALEGAR PROTEÇÃO VEICULAR</td>
+      <td>⚠️ Possível correção</td>
+    </tr>
+  </tbody>
+</table>
 
-<style>
-.container {
-  background-color: #ffffff;
-  text-align: center;
-  padding: 16px;
-  border-radius: 8px;
-}
+Sugestões de correções:
 
-h1 {
-  color: #ff6d5a;
-  font-size: 24px;
-  font-weight: bold;
-  padding: 8px;
-}
-
-h2 {
-  color: #909399;
-  font-size: 18px;
-  font-weight: bold;
-  padding: 8px;
-}
-</style>
-
-<script>
-console.log("Hello World!");
-</script>
+* ANUNCIANTE: ETELE CALL CENTER E CORRETORA DE SEGUROS LTDA
+* Razão Social: ETELE CALL CENTER E CORRETORA DE SEGUROS LTDA
+* CNPJ: 24.493.333/0001-88
+* Endereço: Rua Elias Nassif Sobrinho, 271, Anexo 01
+* Bairro: São Joaquim
+* Estado: SP
+* AGÊNCIA: PRODUTO VALEGAR PROTEÇÃO VEICULAR
+* Material: PRODUTO VALEGAR PROTEÇÃO VEICULAR
+* PRODUTO: PRODUTO VALEGAR PROTEÇÃO VEICULAR
+* VALECAR PROTEÇÃO VEICULAR: Altere para VALEGAR PROTEÇÃO VEICULAR
